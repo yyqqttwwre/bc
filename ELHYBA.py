@@ -64,7 +64,7 @@ import json
 num_accounts = 0
 API_ID = '20367329'
 API_HASH = '303567750a63b7eb96b3ffb1dcde0083'
-bot_token = '6184644965:AAFAEK19Mbg6BjOB-pLjctWtG7QspmNkDRs'
+bot_token = '6889257406:AAE553VDCKz79kRyk9MId8VVRGliKpoHtS0'
 running_processes = {}
 try:
     with open("echo_data.json", "r") as json_file:
@@ -95,7 +95,7 @@ def Get_Reaction():
 
 if "token" not in info:
     while (True):
-        bot_token = '6184644965:AAFAEK19Mbg6BjOB-pLjctWtG7QspmNkDRs'
+        bot_token = '6889257406:AAE553VDCKz79kRyk9MId8VVRGliKpoHtS0'
         response = requests.request(
             "GET", f"https://api.telegram.org/bot{bot_token}/getme")
         response_json = response.json()
@@ -464,7 +464,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("• مرحباً بك في بوت تجميع النقاط\n\n• قناة البوت : @B_G_GG\n\n• سرعة التجميع : " + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
+            await update.message.reply_text("• مرحباً بك في بوت تجميع النقاط\n\n\n\n• سرعة التجميع : " + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
 
         elif str(update.message.chat.id) in info["admins"]:
             what_need_to_do_echo[str(update.message.chat.id)] = ""
@@ -483,7 +483,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 ],
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await update.message.reply_text("• مرحباً بك في بوت تجميع النقاط\n\n• قناة البوت : @B_G_GG\n\n• سرعة التجميع : " + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
+            await update.message.reply_text("• مرحباً بك في بوت تجميع النقاط\n\n• قناة البوت\n\n• سرعة التجميع : " + str(info["sleeptime"]) + 's' ,reply_markup=reply_markup)
 
 def contact_validate(text):
     text = str(text)  
